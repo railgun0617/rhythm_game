@@ -1,0 +1,22 @@
+# --- Bootstrapping tools (safe to include; may not self-upgrade mid-run) ---
+pip>=24.2
+setuptools>=75.0
+wheel>=0.44.0
+
+# --- Core scientific stack ---
+numpy>=2.1; python_version>='3.13'
+numpy>=1.26,<3.0; python_version<'3.13'
+scipy>=1.14.1
+
+# --- Audio/MIR ---
+librosa>=0.11
+audioread>=3.0.0
+soundfile>=0.12
+soxr>=0.3
+
+# Python 3.13 removed aifc/sunau from stdlib; these shims keep librosa happy
+standard-aifc>=1.2; python_version>='3.13'
+standard-sunau>=1.2; python_version>='3.13'
+
+# --- Game ---
+pygame>=2.6.1
